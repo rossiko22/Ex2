@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+public class Ex3 {
+
+	public static void main(String[] args) {
+		Scanner src = new Scanner(System.in);
+		
+		System.out.print("Enter your first name : ");
+		String firstName = src.next();
+		System.out.print("Enter your last name : ");
+		String lastName = src.next();
+		System.out.print("Enter your year of birth : ");
+		int year = src.nextInt();
+		System.out.print("Enter your height in meters(1.78): ");
+		double height = src.nextDouble();
+		
+		int age = 2023 - year;
+		double centimeters = height * 100;
+		
+		System.out.println("Your name is " + firstName + " " + lastName);
+		System.out.println("You are " + age + " old");
+		System.out.println("Your height is : " + centimeters + "cm");
+		
+		src.close();
+		
+		
+		
+		
+
+}
+}
