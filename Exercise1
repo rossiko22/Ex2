@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		Scanner src = new Scanner(System.in);
+		
+		String item = src.nextLine();
+		
+		int length = item.length();
+		char middleLetter;
+		String newItem;
+		System.out.println("Original - " + item);
+		System.out.println("lowerCase - " + item.toLowerCase());
+		System.out.println("upperCase - " + item.toUpperCase());
+		System.out.println("Lenght - " + length);
+		System.out.println("firstLetter - " + item.charAt(0));
+		if (length % 2 == 0) {
+			System.out.println("The lenght is even and it doesnt have middle letter");
+		}else {
+			middleLetter = item.charAt(length / 2);
+			System.out.println("middleLetter - " + middleLetter);
+		}
+		System.out.println("lastLetter - " + item.charAt(item.length() - 1));
+		System.out.println("The item starts with 'Con' is " + item.startsWith("Con") );
+		System.out.println("The item ends with 'ion' is " + item.endsWith("ion") );
+		if(length < 2) {
+			newItem = item;
+		}else {
+			newItem = item.substring(0,2);
+		}
+		System.out.println("The first two letters are " + newItem);
+		String swappedItem = item.replace("e","o");
+		System.out.println("The 'e' and 'o' swapped " + swappedItem);
+		String replacedItem = item.replace("Comput","Calcula");
+		System.out.println("Replaced 'Compu' with 'Calcula: " + replacedItem);
+		
+		src.close();
+	}
+	
+
+}
